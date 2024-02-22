@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* INICIO REGRAS CSS COMUNS À TODOS OS DISPOSITIVOS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; 
+  max-width: 1220px;
+}
+
+body {
+  max-width: 1220px;
+  background-image: url("../images/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed
+  
+}
+.texto{
+  position:static;
+  display:flex;
+  justify-content:right;
+  margin-left: 300px;
+  margin-top: -550px;
+  /* width: 1500px; */
+  font-size: 70px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 5px 5px 10px rgba(16, 1, 146, 0.151);
+}
+
+/* INICIO REGRAS CSS DO CONTAINER */
+/* Container para page2 */
+.container {
+  justify-content: center;
+}
+/* Container para index(login) */
+.container1 { 
+  display:flex;
+  justify-content: left;
+  width: 20px;
+  margin-top: 60px;
+  margin-left: 200px;
+}
+
+.form-row1{
+  max-width: 35vh;
+  max-height: 35vh;
+  justify-content: center;
+  border: 1px solid rgba(128, 128, 128, 0.521);
+  margin-left: 40px;
+  border-radius: 5px;
+}
+.form-row2{
+  max-width: 50vh;
+  max-height: 90vh;
+  justify-content: center;
+  border: 1px solid rgba(128, 128, 128, 0.521);
+  margin: 0px;
+  margin-top: 90px;
+  border-radius: 10px;
+}
+
+.bi-person{
+  margin-left: 280px;
+  font-size: 18px;
+}
+
+/* Card para index(login) */
+.card {
+  position:relative;
+  background-color: #ffffff;
+  padding: 90px;
+  border-radius: 1%;
+  box-shadow: 3px 3px 10px 0px #0a008f73;
+  overflow: hidden;
+}
+
+/* Card para page2 */
+.card2 {
+  position:absolute;
+  background-color: #ffffff;
+  padding: 80px;
+  border-radius: 1%;
+  box-shadow: 3px 3px 10px 0px #0a008f73;
+  width: 1100px;
+  height: 720px;
+  margin-left: 90px;
+}
+
+.table {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: -15px;
+  
+}
+
+
+.card span:first-of-type{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, rgb(38, 0, 255));
+  animation: animar1 2s linear infinite; 
+}
+
+@keyframes animar1{
+  0%{
+    transform: translateX(-100%);
+  }
+   100% {
+    transform: translateX(100%);
+   } 
+  }
+
+.card span:nth-of-type(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgb(38, 0, 255));
+  animation: animar2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animar2{
+  0%{
+    transform: translateY(-100%);
+  }
+   100% {
+    transform: translateY(100%);
+   } 
+  }
+
+  .card span:nth-of-type(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, rgb(38, 0, 255));
+    animation: animar3 2s linear infinite;
+  }
+  
+  @keyframes animar3 {
+    0%{
+      transform: translateX(100%);
+    }
+     100% {
+      transform: translateX(-100%);
+     } 
+    }
+
+.card span:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgb(38, 0, 255));
+  animation: animar4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animar4 {
+  0%{
+    transform: translateY(100%);
+  }
+   100% {
+    transform: translateY(-100%);
+   } 
+  }
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #272262
+}
+
+
+.label-float input{
+  position: absolute;
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #272262;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+}
+
+.label-float{
+  position:relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid #4038a0;
+}
+
+.label-float label{
+  color: #272262;
+  pointer-event: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #4038a0
+}
+
+button{
+  background-color: transparent;
+  border-color: #272262;
+  color: #272262;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  width: 180px;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: #272262;
+  color: #fff;
+}
+/* TTG Index */
+.justify-center1{
+  margin-top: 20%;
+  margin-left: 25%;
+}
+.btn-entrar{
+  margin-top: 20%;
+  margin-left: 15%;
+}
+
+.justify-center{
+  margin-top: 50%;
+  margin-left: 5%;
+}
+
+.justify-center2023{
+  margin-top: 10%;
+  text-align: center;
+
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%;
+}
+
+p{
+  color: #272262;
+  font-size: 14pt;
+  text-align: center;
+}
+
+a{
+  color: #7a3077;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+a:hover{
+  color: #272262;
+}
+
+.progress-container {
+  border-radius: 8px;
+  max-width: 300px;
+  max-height: 25px;  
+  margin: 35px;
+}
+
+.progress-bar {
+  width: 10;
+  height: 20px;
+  background-color: #797979;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 8px;
+  margin-top: -30px;
+}
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+/* FIM DAS REGRAS CSS DO CONTAINER */
+
+/* INICIO REGRAS CSS DO FOOTER E LOGO NASSAU */
+
+#footer_copyright {
+  position: fixed;
+  font-size: 15px;
+	color: #000000;	
+	font-weight: 100px;
+  margin-top: 340px;
+  margin-left: 650px;
+  bottom: 0;
+}
+
+#rodape{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  
+}
+
+ /* Estilos para o botão de abrir o modal */
+ .open-modal-button {
+  position: absolute;
+  background-color: transparent;
+  border-color: #272262;
+  color: #272262;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 150px;
+  border-radius: 50px;
+  transition: all .4s ease-out;
+  left: 130px;
+  margin-top: 5px;
+}
+
+ /* Estilos para o botão de fechar o modal */
+ .close-modal-button {
+  position: absolute;
+  top: -25px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-color: #272262;
+  color: #272262;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 10pt;
+  border-radius: 50px;
+  border: 0;
+  transition: all .4s ease-out;
+  cursor: pointer;
+}
+
+.printbtn{
+  position: absolute;
+  top: 250px;
+  background-color: transparent;
+  border-color: #272262;
+  color: #272262;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 70px;
+  border-radius: 10px;
+  transition: all .4s ease-out;
+  left: 630px;
+  cursor: pointer;
+}
+
+
+/* Estilos para o modal (inicialmente oculto) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+#linha-vertical {
+  height: 100px;
+  border-left: 1px solid rgb(253, 0, 0);
+  
+}
+#linha-horizontal {
+  width: 620px;
+  border: 1px solid #000000;
+}
+
+/*LOADING ANIMATION*/
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #020352;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from{transform: rotate(0turn)}
+  to {transform: rotate(1turn)}
+
+}
+
+.entradaform{
+  margin-left: 430px;
+  margin-top: 40px;
+  
+}
+
+.entry-button {
+  position: absolute;
+  background-color:green;
+  border-color: #22622b18;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 80px;
+  border-radius: 50px;
+  transition: all .4s ease-out;
+  left: 510px;
+  margin-top: 10px;
+}
+
+.entry-button2 {
+  position: absolute;
+  background-color:green;
+  border-color: #22622b18;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 80px;
+  border-radius: 50px;
+  transition: all .4s ease-out;
+  left: 610px;
+  margin-top: -38px;
+}
+
+.saidaform{
+  margin-left: 700px;
+  margin-top: 4%;
+}
+
+.exit-button{
+  position: absolute;
+  background-color:red;
+  border-color: #a5050060;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 80px;
+  border-radius: 50px;
+  transition: all .4s ease-out;
+  left: 775px;
+  margin-top:20px;
+  
+}
+
+.imprimir-button{
+  position: absolute;
+  background-color:red;
+  border-color: #a5050060;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10pt;
+  width: 80px;
+  border-radius: 50px;
+  transition: all .4s ease-out;
+  left: 875px;
+  margin-top:20px;
+  
+}
+
+/* FIM REGRAS CSS DO FOOTER E LOGO NASSAU */
+
+/* FIM REGRAS CSS COMUNS À TODOS OS DISPOSITIVOS */

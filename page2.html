@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <!-- INICIO META TAGS -->
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/logoepark.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- FIM META TAGS -->
+
+    <!-- INICIO ARQUIVOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/signin.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    
+    <!-- FIM ARQUIVOS CSS -->
+
+    <!-- INICIO TITULO DO DOCUMENTO -->
+    <title>EPARK-Ltda</title>
+    <!-- FIM TITULO DO DOCUMENTO -->
+  </head>
+  <body>
+    <!-- LOADER DA PÁGINA -->
+    <div class="loader"></div>
+     <!-- INICIO TITULO DA PÁGINA -->
+     
+     <!-- LOGO DA NASSAU RODAPÉ -->
+    <div id="rodape">
+          <img src="../images/uninassau-logo.png"/> 
+  </div> 
+  <!-- FIM LOGO DA NASSAU RODAPÉ -->
+       
+  <!-- ÁREA DO MENU CONTAINER -->
+  <div class="container">
+
+    <div class="card2">
+      
+      <img src="../images/logo.png" height="150px">        
+      <h1 id="painel" style="margin-left: -50%;">Painel</h1>
+      <div id="relatorio">
+      <div class="form-row1">
+        <h5 align="center">Epark Uninassau</h5>
+        <br>
+        <div class="table">
+        <div id="entradas"></div>
+        <div id="saidas"></div><br>
+        <div id="vagasLivres"></div>
+        <div id="vagasOcupadas"></div>
+        <div id="totalVagas"></div>
+        <!-- <div id="valorTotalCaixa"></div> -->
+        </div> 
+      </div>
+    </div>
+    
+        
+<!-- Botão para abrir o modal -->
+
+<button class="open-modal-button" id="printButton">Imprimir Relatório</button>
+
+<!-- CADASTRO DE ENTRADA -->
+
+<h1 style="margin-left: 100px; margin-top: -380px;">ENTRADA</h1>
+
+<div id="entradaForm" class="entradaform">
+    <label for="placaEntrada">Placa do Veículo:</label>
+    <input class="form-control" maxlength="7" type="text" id="placaEntrada" name="placa" required style="width: 13vw;" placeholder="Insira a placa, aqui..."><br><br>
+    <div class="form-control" style="width: 220px;" id="dataHora"></div><br>
+    <label for="observacoes">Informações Adicionais:</label>
+    <input class="form-control" maxlength="24"type="text" id="observacoesEntrada" style="width: 13vw; height: 13vh;" placeholder="Observações..." />
+    <button class="entry-button" id="registrarEntrada">Entrada</button><br><br>
+    <button class="entry-button2" id="btnEntrada" onclick="openModalentrada()" >Impressão</button>
+
+</div>
+
+<!-- Modal de Entrada -->
+<div id="myModalentrada" class="modalentrada">
+    <div class="modal-content-entrada">
+        <button class="closeModalentrada" onclick="closeModalentrada()">X</button>
+        <h2>Detalhes da Entrada</h2>
+        <p id="modalPlacaEntrada"></p>
+        <p id="modalDataHora"></p>
+        <p id="modalObservacoesEntrada"></p>
+        <button class="printButtonentradasaida" id="printButtonentrada">Imprimir</button>
+    </div>
+</div>
+
+<!-- CADASTRO DE SAÍDA -->
+
+  <h1 style="margin-left: 600px; margin-top: -420px;">SAÍDA</h1>
+  <div id="saidaForm" class="saidaform">
+  <label for="placaSaida">Placa do Veículo:</label>
+  <input class="form-control" maxlength="7" type="text" id="placaSaida" required style="width: 13vw;" placeholder="Insira a placa, aqui..." />
+  <button class="exit-button" id="registrarSaida">Saída</button>
+  <button class="imprimir-button" id="printButtonsaida">Imprimir</button>
+    <div id="relatorioSaida">
+    <div class="form-row2">
+      <h5 align="center">Informações</h5>
+      <br>
+      <div class="table">
+      <div id="resultado"></div>
+      <div id="informacoesAdicionais"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  
+  
+
+<!-- FIM CADASTRO DE ENTRADA / SAIDA-->
+ 
+<br><br>
+      
+      </div>
+    </div>
+    <!-- FIM ÁREA DO MENU CONTAINER -->    
+
+    <!-- FIM ÁREA DO TEXTO PRINCIPAL -->
+    
+<br>
+    <!-- TEXTO DOS DIREITOS FOOTER -->
+    <footer>
+      <div id="footer_copyright">
+        <h6>Todos os direitos Reservados - Copyright © 2023</h6>
+
+      </div>
+    </footer>
+    <!-- FIM TEXTO DOS DIREITOS FOOTER -->
+       
+   <!-- FIM TITULO DA PÁGINA -->
+  </body>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="../js/signin.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
